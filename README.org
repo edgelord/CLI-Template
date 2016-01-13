@@ -10,7 +10,7 @@ The class defined in dispatcher.py should make it easy to set up a command line 
         print "\t 2.)  Send Commands to an Agent"
         print "\t 3.)  View Information Gathered"
  
-...
+
 
         choice = raw_input('spf> ').strip().lower()
         print
@@ -33,7 +33,7 @@ The class defined in dispatcher.py should make it easy to set up a command line 
     d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
     d.add_option('Send Commands to an Agent' agent_control)
     d.add_option('View Information Gathered',view_data)
-...
+
     d.run()
 #+end_src
 
