@@ -1,0 +1,79 @@
+* Overview 
+
+The class defined in dispatcher.py should make it easy to set up a command line interface for the pentesting framework.
+
+Original code from https://github.com/georgiaw/Smartphone-Pentest-Framework/tree/master/frameworkconsole:
+
+#+begin_src: python
+        print "Select An Option from the Menu:"
+        print
+        print "\t 1.)  Attach Framework to a Deployed Agent/Create Agent"
+        print "\t 2.)  Send Commands to an Agent"
+        print "\t 3.)  View Information Gathered"
+ 
+...
+
+        choice = raw_input('spf> ').strip().lower()
+        print
+
+        if choice == '1':
+            agent_attach2()       
+        if choice == '2':
+            agent_control()
+        if choice == '3':
+            view_data()
+
+#+end_src
+
+Equivalent code using my dispatcher:
+
+
+#+begin_src: python
+	message = ('Select An Option from the Menu:')
+    d = Dispatcher(message)
+    d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
+    d.add_option('Send Commands to an Agent' agent_control)
+    d.add_option('View Information Gathered',view_data)
+...
+    d.run()
+#+end_src
+
+* User "Guide"
+Instantiate a dispatcher as follows:
+
+#+begin_src: python
+    d = Dispatcher(message='Desired intro message', cycle=boolean)
+
+#+end_src
+
+The constructor has two optional arguments:
+- message can be set to a string to greet the user
+- cycle controls wheter the dispatcher should loop until the user is ready to exit
+
+NOTE: Selecting the exit option terminates the entire program.
+
+Set up the options for the dispatcher as follows:
+#+begin_src: python
+    d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
+    d.add_option('Send Commands to an Agent' agent_control)
+    d.add_option('View Information Gathered',view_data)
+#+end_src
+
+The add_option method takes two arguments:
+- First argument: A string that specifies what the option does
+- Second argument: A function/callable that is to be executed if the user selects this option
+
+Finally, to run this dispatcher, we call:
+
+#+begin_src: python
+    d.run()
+#+end_src
+
+* Demo
+
+The dispatcher was used as an interface for an AI I have designed. Using cutting edge liberalism and progressive ideology, the AI is very powerful. 
+Care must be taken to ensure it never falls into the wrong hands.
+
+The demonstration show's its cabilities in tackling today's most challenging problems.
+
+To run it, download this repository and run "python demo.py" from the command line. It is so sophisticated it works with all major python versions.
