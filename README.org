@@ -3,7 +3,7 @@ The class defined in dispatcher.py should make it easy to set up a command line 
 
 ** Original code
 
-#+BEGIN_SRC: python
+#+begin_src python
         print "Select An Option from the Menu:"
         print
         print "\t 1.)  Attach Framework to a Deployed Agent/Create Agent"
@@ -22,15 +22,13 @@ The class defined in dispatcher.py should make it easy to set up a command line 
         if choice == '3':
             view_data()
 
-#+END_SRC
+#+end_src
 
 ** Equivalent code using the dispatcher module:
 
-#+begin_src python
-return "Hello, world"
-#+end_src
 
-#+begin_src: python
+
+#+begin_src python
 	message = ('Select An Option from the Menu:')
     d = Dispatcher(message)
     d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
@@ -44,7 +42,7 @@ return "Hello, world"
 *** Instantiating
 Instantiate a dispatcher as follows:
 
-#+begin_src: python
+#+begin_src python
     d = Dispatcher(message='Desired intro message', cycle=boolean)
 
 #+end_src
@@ -57,7 +55,7 @@ NOTE: Selecting the exit option terminates the entire program.
 
 *** Adding options
 Set up the options for the dispatcher as follows:
-#+begin_src: python
+#+begin_src python
     d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
     d.add_option('Send Commands to an Agent' agent_control)
     d.add_option('View Information Gathered',view_data)
@@ -70,7 +68,7 @@ The add_option method takes two arguments:
 *** Running
 Finally, to run this dispatcher, we call:
 
-#+begin_src: python
+#+begin_src python
     d.run()
 #+end_src
 
