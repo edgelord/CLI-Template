@@ -2,7 +2,7 @@ from dispatcher import Dispatcher
 
 
 def diversify():
-    print('Good choice. Diversity is our greatest strength.')
+    print('We need women and homosexuals in the military to ensure it functions properly.')
     raw_input('\n Press return to coninue.')
 
 def combat_islamophobia():
