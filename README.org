@@ -28,8 +28,7 @@ Additionally, the dispatcher is used as an interface for a highly sophistacted A
 
 
 #+begin_src python
-  message = ('Select An Option from the Menu:')
-  d = Dispatcher(message)
+  d = Dispatcher('Select An Option from the Menu:')
   d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
   d.add_option('Send Commands to an Agent' agent_control)
   d.add_option('View Information Gathered',view_data)
