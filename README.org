@@ -38,6 +38,7 @@ The class defined in dispatcher.py should make it easy to set up a command line 
 #+end_src
 
 * User "Guide"
+*** Instantiating Options
 Instantiate a dispatcher as follows:
 
 #+begin_src: python
@@ -46,8 +47,8 @@ Instantiate a dispatcher as follows:
 #+end_src
 
 The constructor has two optional arguments:
-- message can be set to a string to greet the user
-- cycle controls wheter the dispatcher should loop until the user is ready to exit
+- message: Can be set to a string to greet the user. By default, there is no message.
+- cycle: Controls whether the dispatcher should loop until the user is ready to exit. By default, there is no looping.
 
 NOTE: Selecting the exit option terminates the entire program.
 
