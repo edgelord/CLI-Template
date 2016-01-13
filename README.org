@@ -38,7 +38,7 @@ The class defined in dispatcher.py should make it easy to set up a command line 
 #+end_src
 
 * User "Guide"
-*** Instantiating Options
+*** Instantiating
 Instantiate a dispatcher as follows:
 
 #+begin_src: python
@@ -52,6 +52,7 @@ The constructor has two optional arguments:
 
 NOTE: Selecting the exit option terminates the entire program.
 
+*** Adding options
 Set up the options for the dispatcher as follows:
 #+begin_src: python
     d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
@@ -63,6 +64,7 @@ The add_option method takes two arguments:
 - First argument: A string that specifies what the option does
 - Second argument: A function/callable that is to be executed if the user selects this option
 
+*** Running
 Finally, to run this dispatcher, we call:
 
 #+begin_src: python
