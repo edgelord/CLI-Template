@@ -24,7 +24,7 @@ The class defined in dispatcher.py should make it easy to set up a command line 
 
 #+END_SRC
 
-* Equivalent code using the dispatcher module:
+** Equivalent code using the dispatcher module:
 
 
 #+begin_src: python
