@@ -77,4 +77,4 @@ Care must be taken to ensure it never falls into the wrong hands.
 
 The demonstration show's its cabilities in tackling today's most challenging problems.
 
-To run it, download this repository and run "python demo.py" from the command line. It is so sophisticated it works with all major python versions.
+To run it, download this repository's source code and run "python demo.py" from the command line. Run it from within the src folder. It is so sophisticated it works with all major python versions.
