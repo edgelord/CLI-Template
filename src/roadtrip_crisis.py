@@ -15,8 +15,7 @@ def gun_control():
     raw_input('\nPress return to coninue.')
     
 def cultural_suicide():
-    print('The answer is always gun control.\n'
-          'Allahu Akbar.')
+    print('The only truly progressive choice.')
     raw_input('\nPress return to coninue.')
     
     
