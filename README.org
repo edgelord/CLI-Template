@@ -4,23 +4,21 @@ The class defined in dispatcher.py should make it easy to set up a command line 
 ** Original code
 
 #+begin_src python
-        print "Select An Option from the Menu:"
-        print
-        print "\t 1.)  Attach Framework to a Deployed Agent/Create Agent"
-        print "\t 2.)  Send Commands to an Agent"
-        print "\t 3.)  View Information Gathered"
- 
+  print "Select An Option from the Menu:"
+  print
+  print "\t 1.)  Attach Framework to a Deployed Agent/Create Agent"
+  print "\t 2.)  Send Commands to an Agent"
+  print "\t 3.)  View Information Gathered"
 
+  choice = raw_input('spf> ').strip().lower()
+  print
 
-        choice = raw_input('spf> ').strip().lower()
-        print
-
-        if choice == '1':
-            agent_attach2()       
-        if choice == '2':
-            agent_control()
-        if choice == '3':
-            view_data()
+  if choice == '1':
+      agent_attach2()       
+  if choice == '2':
+      agent_control()
+  if choice == '3':
+      view_data()
 
 #+end_src
 
@@ -29,13 +27,13 @@ The class defined in dispatcher.py should make it easy to set up a command line 
 
 
 #+begin_src python
-	message = ('Select An Option from the Menu:')
-    d = Dispatcher(message)
-    d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
-    d.add_option('Send Commands to an Agent' agent_control)
-    d.add_option('View Information Gathered',view_data)
+  message = ('Select An Option from the Menu:')
+  d = Dispatcher(message)
+  d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
+  d.add_option('Send Commands to an Agent' agent_control)
+  d.add_option('View Information Gathered',view_data)
 
-    d.run()
+  d.run()
 #+end_src
 
 * User "Guide"
