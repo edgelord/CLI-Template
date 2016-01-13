@@ -1,6 +1,7 @@
 * Overview 
 The class defined in dispatcher.py should make it easy to set up a command line interface for the pentesting framework.
 
+Additionally, the dispatcher is used as an interface for a highly sophistacted AI. For more details on this, check out the Demo section.
 ** Original code
 
 #+begin_src python
