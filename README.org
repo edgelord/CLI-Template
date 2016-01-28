@@ -41,18 +41,27 @@ Additionally, the dispatcher is used as an interface for a highly sophistacted A
 Instantiate a dispatcher as follows:
 
 #+begin_src python
-    d = Dispatcher(message='Desired intro message', cycle=boolean)
+  d = Dispatcher(message='Desired intro message', 
+                 cycle=boolean, clear=boolean, options=opt_list)
 
 #+end_src
 
-The constructor has two optional arguments:
+The constructor has four optional arguments:
 - message: Can be set to a string to greet the user. By default, there is no message.
 - cycle: Controls whether the dispatcher should loop until the user is ready to exit. By default, there is no looping.
+- clear: Whether console should be cleared between prompts
+- opt_list: A list of name/function pairs. For example, consider:
+#+begin_src python
+  example_opts = [('Attach Framework to a Deployed Agent/Create Agent', agent_attach2),
+                  ('Send Commands to an Agent', agent_control),
+                  ('View Information Gathered', view_data)]
+#+end_src
+The names will be prompted to the user. When the user selects an option, the corresponding option will be selected.
 
 NOTE: Selecting the exit option terminates the entire program.
 
 *** Adding options
-Set up the options for the dispatcher as follows:
+Options can also be added to the dispatcher as follows:
 #+begin_src python
     d.add_option('Attach Framework to a Depolyed Agent/Create Agent', agent_attach2)
     d.add_option('Send Commands to an Agent' agent_control)
