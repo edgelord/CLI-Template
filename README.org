@@ -1,5 +1,7 @@
 * Overview 
-The class defined in dispatcher.py should make it easy to set up a command line interface for the pentesting framework.
+The class defined in dispatcher.py should make it easy to set up a command line interface.
+If this template is too restrictive, https://docs.python.org/2/library/cmd.html may be a better fit.
+
 
 Additionally, the dispatcher is used as an interface for a highly sophistacted AI. For more details on this, check out the Demo section.
 ** Original code
@@ -82,4 +84,4 @@ Finally, to run this dispatcher, we call:
 * Demo
 There's a demo in the source folder, that shows how the dispatcher can be run and chained.
 
-To run it, download this repository's source code and run "python demo.py" from the command line. Run it from within the src folder. It is so sophisticated it works with all major python versions.
+To run it, download this repository's source code and run "python demo.py" from the command line. Run it from within the src folder. 
