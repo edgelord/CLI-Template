@@ -2,8 +2,6 @@
 The class defined in dispatcher.py should make it easy to set up a command line interface.
 If this template is too restrictive, https://docs.python.org/2/library/cmd.html may be a better fit.
 
-
-Additionally, the dispatcher is used as an interface for a highly sophistacted AI. For more details on this, check out the Demo section.
 ** Original code
 
 #+begin_src python
