@@ -80,10 +80,6 @@ Finally, to run this dispatcher, we call:
 #+end_src
 
 * Demo
-
-The dispatcher was used as an interface for an AI I have designed. Using cutting edge liberalism and progressive ideology, the AI is very powerful. 
-Care must be taken to ensure it never falls into the wrong hands.
-
-The demonstration show's its cabilities in tackling today's most challenging problems.
+There's a demo in the source folder, that shows how the dispatcher can be run and chained.
 
 To run it, download this repository's source code and run "python demo.py" from the command line. Run it from within the src folder. It is so sophisticated it works with all major python versions.
