@@ -4,10 +4,11 @@ import os
 
 class Dispatcher():
 
-    def __init__(self, message=None, cycle=False):
+    def __init__(self, message=None, cycle=False, options=[], clear=False):
         self.message = message
-        self.options = []
+        self.clear = clear
         self.cycle = cycle
+        self.options = options
         if cycle:
             self.options.append(('Exit', lambda: _exit(0)))
 
@@ -15,7 +16,8 @@ class Dispatcher():
         self.options.append((description, function))
 
     def show_options(self):
-        os.system('cls' if os.name == 'nt' else 'clear')
+        if self.clear:
+            os.system('cls' if os.name == 'nt' else 'clear')
         if self.message:
             print(self.message)
         for i, (desc, _) in enumerate(self.options):
@@ -28,11 +30,9 @@ class Dispatcher():
         while not choice.isdigit() or int(choice) not in valid_choices:
             errormsg = '\nPlease select the number (0-{0}) corresponding to your desired option.\n'
             choice = raw_input(errormsg.format(len(self.options)))
-            
         option_fn = self.options[int(choice)][1]
         option_fn()
-        
-        
+
     def run(self):
         while self.cycle:
             self.run_once()
