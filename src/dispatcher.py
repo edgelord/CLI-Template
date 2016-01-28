@@ -5,12 +5,13 @@ import os
 class Dispatcher():
 
     def __init__(self, message=None, cycle=False, options=[], clear=False):
-        self.message = message
-        self.clear = clear
-        self.cycle = cycle
-        self.options = options
         if cycle:
-            self.options.append(('Exit', lambda: _exit(0)))
+            self.options = [('Exit', lambda: _exit(0))]+options
+        else:
+            self.options = [('Back', lambda: None)]+options
+        self.cycle = cycle
+        self.clear = clear
+        self.message = message
 
     def add_option(self, description, function):
         self.options.append((description, function))
